@@ -8,7 +8,10 @@ router.use(authMiddleware);
 router.post('/', sintomasController.registrarSintoma);
 router.get('/', sintomasController.listarSintomas);
 router.get('/:id', sintomasController.obterSintomaPorId);
+router.put('/:id', sintomasController.atualizarSintoma);  // Editar Sintoma
+router.delete('/:id', sintomasController.deletarSintoma);  // Excluir Sintoma
 
 router.patch('/:id/status', sintomasController.atualizarStatusSintoma);
 
-module.exports = router; 
+// ✅ Apenas um `module.exports`
+module.exports = router;
